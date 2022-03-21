@@ -1,7 +1,0 @@
-C:\Users\Dell\Desktop\Itirod\lc\Client\obj\Debug\net5.0-windows\Client.csproj.AssemblyReference.cache
-C:\Users\Dell\Desktop\Itirod\lc\Client\obj\Debug\net5.0-windows\Client.Form1.resources
-C:\Users\Dell\Desktop\Itirod\lc\Client\obj\Debug\net5.0-windows\Client.csproj.GenerateResource.cache
-C:\Users\Dell\Desktop\Itirod\lc\Client\obj\Debug\net5.0-windows\Client.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Dell\Desktop\Itirod\lc\Client\obj\Debug\net5.0-windows\Client.AssemblyInfoInputs.cache
-C:\Users\Dell\Desktop\Itirod\lc\Client\obj\Debug\net5.0-windows\Client.AssemblyInfo.cs
-C:\Users\Dell\Desktop\Itirod\lc\Client\obj\Debug\net5.0-windows\Client.csproj.CoreCompileInputs.cache
