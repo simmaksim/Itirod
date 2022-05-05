@@ -5,6 +5,19 @@
     
 }
 
+ul{
+    list-style-type: none;
+}
+
+h4{
+    color: #fffffe;
+    font-family: monospace;
+}
+
+a{
+    font-family: "Monaco", monospace;
+}
+
 button{
     cursor: pointer;
 }
@@ -56,6 +69,7 @@ body{
     background: linear-gradient(to bottom, #0f0e17, #434343); 
     
 }
+
 
 .player-logo {
     display: flex;
@@ -170,13 +184,13 @@ body{
     align-items: center;
 }
 
-.playlist_and_name_container {
+.playlist-and-name-container {
     display: flex;
     flex-direction: column;
     color: #fffffe;
 }
 
-.Person {
+.person {
     display: flex;
     gap: 10px;
 }
@@ -221,14 +235,14 @@ button {
     border: none;    
 }
 
-.NavigSearch {
+.navig-search {
     flex-shrink: 0;
     height: 24px;
     width: 24px;
     filter: invert(100%) sepia(22%) saturate(499%) hue-rotate(349deg) brightness(99%) contrast(116%);
 }
 
-.NavigLiked {
+.navig-liked {
     flex-shrink: 0;
     height: 24px;
     width: 24px;
@@ -240,9 +254,18 @@ button {
     height: 450px;
 }
 
+.playlist-item {
+    display: block;
+    font-family: "Monaco", monospace;
+    width: 100%;
+    padding: 4px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .playlist-item:hover {
     background: #ff8906;
-    font-family: "Monaco", monospace;
 }
 
 .nav-item >a{    
@@ -282,7 +305,7 @@ button {
     font-family: "Monaco", monospace;
 }
 
-.Like-btn {
+.like-btn {
     background: #fffffe;
     display: flex;
     align-items: center;
@@ -293,7 +316,7 @@ button {
     box-shadow: 0 3px 20px;
 }
 
-.Like-btn:hover{
+.like-btn:hover{
     background-color: #ff8906;
 }
 
@@ -354,11 +377,12 @@ button {
     gap: 20px;
 }
 
-.lItem {
+.l-item {
     list-style-type: none;
+    padding: 5px;
 }
 
-.MyPlaylist {
+.my-playlist {
     width: 100%;
     background-color: #0f0e17;
     display: flex;
@@ -370,7 +394,7 @@ button {
     display: none;
 }
 
-.Svg-color {
+.svg-color {
     filter: invert(100%) sepia(22%) saturate(499%) hue-rotate(349deg) brightness(99%) contrast(116%);
 }
 
@@ -378,10 +402,20 @@ button {
     font-family: "Monaco", monospace;
 }
 
-.Svg-def {
+.svg-def {
     width: 24px;
     height: 24px;
 }
+
+
+.song-descr-name {
+    color: #fffffe;
+}
+
+.song-descr-auth {
+    color: #a7a9be;
+}
+
 
 @media (max-width: 600px) {
     .navphome, 
@@ -393,3 +427,18 @@ button {
     }
 }
 
+.font-only{
+    font-family: "Monaco", monospace;
+}
+
+.par{
+    font-family: "Monaco", monospace;
+    color: #a7a9be;
+}
+
+.playlist-inscription {
+    font-family: "Monaco", monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
