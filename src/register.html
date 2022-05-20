@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title>Login</title>
+    <link rel="stylesheet" href="auth.css" />
+  </head>
+  <body>
+
+    <div class="center-box" id="login-div">
+      <a class="area" href=""></a>
+      <h2>Login</h2>
+      <input
+        type="email"
+        id="login-mail"
+        class="text-field"
+        name="login-email"
+        placeholder="Email"
+      /><br />
+      <input
+        type="password"
+        id="login-password"
+        class="text-field"
+        name="login-password"
+        placeholder="Password"
+      /><br />
+      <button id="login-btn" class="btn-style" >Login</button><br />
+      <button id="reg-btn" class="an-btn">Register</button>
+    </div>
+    <div class="center-box" id="register-div">
+      <h2>Register</h2>
+      <input
+        type="email"
+        id="reg-mail"
+        class="text-field"
+        name="reg-email"
+        placeholder="Email"
+        required
+      /><br />
+      <input
+        type="password"
+        id="reg-password"
+        class="text-field"
+        name="reg-password"
+        placeholder="Password"
+        required
+      /><br />
+      <button id="register-btn" class="btn-style">Register</button><br />
+      <button id="log-btn" class="an-btn">Have an account? Login</button>
+    </div>
+    <div id="result-box">
+      <h3 id="result"></h3>
+    </div>
+    <script type="module" src="auth.js"></script>
+  </body>
+</html>
