@@ -52,6 +52,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+
 document.getElementById("reg-btn").addEventListener("click", function () {
   document.getElementById("register-div").style.display = "inline";
   document.getElementById("login-div").style.display = "none";
@@ -70,8 +71,11 @@ signInWithEmailAndPassword(auth, loginEmail, loginPassWord)
     const user = userCredential.user;
     document.getElementById("result-box").style.display = "inline";
     document.getElementById("login-div").style.display = "none";
-    document.getElementById("result").innerHTML="Welcome Back<br>"+loginEmail+"was login succes";
-
+    //document.getElementById("result").innerHTML="Welcome Back<br>"+loginEmail+"was login succes";
+    alert(loginEmail);
+    console.log(user);
+    const nickname = document.getElementById("Nick");
+    nickname.innerHTML=loginEmail;
   })
   .catch((error) => {
     const errorCode = error.code;

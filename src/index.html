@@ -20,7 +20,7 @@
           <nav>
             <ul>
               <li class="nav-item home-btn">
-                <a>
+                <a onclick="router.loadRoute('home')">
                   <svg
                     role="img"
                     height="24"
@@ -37,7 +37,7 @@
                 >
               </li>
               <li class="nav-item search-btn">
-                <a>
+                <a onclick="router.loadRoute('search')">
                   <svg class="NavigSearch" role="img">
                     <path
                       d="M 10.533 1.279 c -5.18 0 -9.407 4.14 -9.407 9.279 s 4.226 9.279 9.407 9.279 c 2.234 0 4.29 -0.77 5.907 -2.058 l 4.353 4.353 a 1 1 0 1 0 1.414 -1.414 l -4.344 -4.344 a 9.157 9.157 0 0 0 2.077 -5.816 c 0 -5.14 -4.226 -9.28 -9.407 -9.28 Z m -7.407 9.279 c 0 -4.006 3.302 -7.28 7.407 -7.28 s 7.407 3.274 7.407 7.28 s -3.302 7.279 -7.407 7.279 s -7.407 -3.273 -7.407 -7.28 Z"
@@ -48,7 +48,7 @@
                 >
               </li>
               <li class="nav-item lib-btn">
-                <a>
+                <a onclick="router.loadRoute('lib')">
                   <svg role="img" class="NavigLiked">
                     <path
                       d="M 14.5 2.134 a 1 1 0 0 1 1 0 l 6 3.464 a 1 1 0 0 1 0.5 0.866 V 21 a 1 1 0 0 1 -1 1 h -6 a 1 1 0 0 1 -1 -1 V 3 a 1 1 0 0 1 0.5 -0.866 Z M 16 4.732 V 20 h 4 V 7.041 l -4 -2.309 Z M 3 22 a 1 1 0 0 1 -1 -1 V 3 a 1 1 0 0 1 2 0 v 18 a 1 1 0 0 1 -1 1 Z m 6 0 a 1 1 0 0 1 -1 -1 V 3 a 1 1 0 0 1 2 0 v 18 a 1 1 0 0 1 -1 1 Z"
@@ -80,503 +80,508 @@
           </div>
         </div>
       </aside>
-      <div id="home_page" class="window not-active">
-        <section class="head">
-          <div class="heads_heder">
-            <form role="search">
-              <input
-                class="line-locat ebHsEf QO9loc33XC50mMRUCIvf"
-                maxlength="800"
-                autocorrect="off"
-                autocapitalize="off"
-                spellcheck="false"
-                placeholder="Исполнитель, трек или подкаст"
-                data-testid="search-input"
-                value=""
-                style="color: rgb(0, 0, 0)"
-              />
-            </form>
-            <section class="Person">
-              <img class="img" src="../assets/LiSA.jpg" , alt="" />
-              <a href="#auth">Nickname</a>
-            </section>
-          </div>
-
-          <section class="playlist">
-            <img class="playlist-img" src="../assets/LiSA.jpg" , alt="" />
-            <div class="playlist_and_name_container">
-              <h2 style="font-family: monospace">Playlist</h2>
-              <h2 style="font-family: monospace">Name</h2>
+      <div class="main-cont">
+        <section class="Person">
+          <img class="img" src="../assets/LiSA.jpg" , alt="" />
+          <a href="#auth" id="Nick" class="a-style">Nickname</a>
+        </section>
+      
+        <div id="home_page" class="window not-active">
+          <section class="head">
+            <div class="heads_heder">
+              <form role="search">
+                <input
+                  class="line-locat ebHsEf QO9loc33XC50mMRUCIvf"
+                  maxlength="800"
+                  autocorrect="off"
+                  autocapitalize="off"
+                  spellcheck="false"
+                  placeholder="Исполнитель, трек или подкаст"
+                  data-testid="search-input"
+                  value=""
+                  style="color: rgb(0, 0, 0)"
+                />
+              </form>
+              
             </div>
 
-            <p style="color: #a7a9be; font-family: monospace">Description</p>
-          </section>
-          <section class="buttons">
-            <div class="Like-btn">
-              <button data-testid="play-button" class="Like-btn">
-                <div
-                  class="ButtonInner-sc-14ud5tc-0 gHYQaG encore-bright-accent-set"
+            <section class="playlist">
+              <img class="playlist-img" src="../assets/LiSA.jpg" , alt="" />
+              <div class="playlist_and_name_container">
+                <h2 style="font-family: monospace">Playlist</h2>
+                <h2 style="font-family: monospace">Name</h2>
+              </div>
+
+              <p style="color: #a7a9be; font-family: monospace">Description</p>
+            </section>
+            <section class="buttons">
+              <div class="Like-btn">
+                <button data-testid="play-button" class="Like-btn">
+                  <div
+                    class="ButtonInner-sc-14ud5tc-0 gHYQaG encore-bright-accent-set"
+                  >
+                    <span
+                      aria-hidden="true"
+                      class="IconWrapper__Wrapper-sc-1hf1hjl-0 dZGDpi"
+                      ><svg
+                        role="img"
+                        height="36"
+                        width="36"
+                        viewBox="0 0 24 24"
+                        class="Svg-def jgfuCe"
+                      >
+                        <path
+                          d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"
+                        ></path></svg
+                    ></span>
+                  </div>
+                </button>
+              </div>
+              <button
+                class="Like-btn"
+                type="button"
+                role="switch"
+                aria-checked="false"
+                aria-label="Добавить в медиатеку"
+                class="Fm7C3gdh5Lsc9qSXrQwO"
+                data-testid="add-button"
+              >
+                <svg role="img" height="24" width="24" class="Svg-def jgfuCe">
+                  <path
+                    d="M5.21 1.57a6.757 6.757 0 016.708 1.545.124.124 0 00.165 0 6.741 6.741 0 015.715-1.78l.004.001a6.802 6.802 0 015.571 5.376v.003a6.689 6.689 0 01-1.49 5.655l-7.954 9.48a2.518 2.518 0 01-3.857 0L2.12 12.37A6.683 6.683 0 01.627 6.714 6.757 6.757 0 015.21 1.57zm3.12 1.803a4.757 4.757 0 00-5.74 3.725l-.001.002a4.684 4.684 0 001.049 3.969l.009.01 7.958 9.485a.518.518 0 00.79 0l7.968-9.495a4.688 4.688 0 001.049-3.965 4.803 4.803 0 00-3.931-3.794 4.74 4.74 0 00-4.023 1.256l-.008.008a2.123 2.123 0 01-2.9 0l-.007-.007a4.757 4.757 0 00-2.214-1.194z"
+                  ></path>
+                </svg>
+              </button>
+              <button
+                type="button"
+                aria-haspopup="menu"
+                aria-label="Открыть контекстное меню: Peace"
+                class="Like-btn"
+                data-testid="more-button"
+                aria-expanded="false"
+              >
+                <svg
+                  role="img"
+                  height="32"
+                  width="32"
+                  viewBox="0 0 24 24"
+                  class="Svg-def jgfuCe"
                 >
-                  <span
-                    aria-hidden="true"
-                    class="IconWrapper__Wrapper-sc-1hf1hjl-0 dZGDpi"
-                    ><svg
-                      role="img"
-                      height="36"
-                      width="36"
-                      viewBox="0 0 24 24"
-                      class="Svg-def jgfuCe"
-                    >
-                      <path
-                        d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"
-                      ></path></svg
-                  ></span>
+                  <path
+                    d="M4.5 13.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm15 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm-7.5 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+                  ></path>
+                </svg>
+              </button>
+            </section>
+          </section>
+          
+          <section class="songs">
+            <ul class="song-items">
+              <li class="item">
+                <button
+                  class="foot-btn"
+                  aria-label="Слушать"
+                  data-testid="control-button-playpause"
+                  style="--button-size: 32px"
+                >
+                  <svg
+                    role="img"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 16 16"
+                    class="Svg-def jgfuCe"
+                  >
+                    <path
+                      d="M3 1.713a.7.7 0 011.05-.607l10.89 6.288a.7.7 0 010 1.212L4.05 14.894A.7.7 0 013 14.288V1.713z"
+                    ></path>
+                  </svg>
+                </button>
+                <img class="playlist-img" src="../assets/LiSA.jpg" , alt="" />
+                <div class="song-descr">
+                  <p style="color: #fffffe">Name</p>
+                  <p style="color: #a7a9be">Author</p>
                 </div>
-              </button>
-            </div>
-            <button
-              class="Like-btn"
-              type="button"
-              role="switch"
-              aria-checked="false"
-              aria-label="Добавить в медиатеку"
-              class="Fm7C3gdh5Lsc9qSXrQwO"
-              data-testid="add-button"
-            >
-              <svg role="img" height="24" width="24" class="Svg-def jgfuCe">
-                <path
-                  d="M5.21 1.57a6.757 6.757 0 016.708 1.545.124.124 0 00.165 0 6.741 6.741 0 015.715-1.78l.004.001a6.802 6.802 0 015.571 5.376v.003a6.689 6.689 0 01-1.49 5.655l-7.954 9.48a2.518 2.518 0 01-3.857 0L2.12 12.37A6.683 6.683 0 01.627 6.714 6.757 6.757 0 015.21 1.57zm3.12 1.803a4.757 4.757 0 00-5.74 3.725l-.001.002a4.684 4.684 0 001.049 3.969l.009.01 7.958 9.485a.518.518 0 00.79 0l7.968-9.495a4.688 4.688 0 001.049-3.965 4.803 4.803 0 00-3.931-3.794 4.74 4.74 0 00-4.023 1.256l-.008.008a2.123 2.123 0 01-2.9 0l-.007-.007a4.757 4.757 0 00-2.214-1.194z"
-                ></path>
-              </svg>
-            </button>
-            <button
-              type="button"
-              aria-haspopup="menu"
-              aria-label="Открыть контекстное меню: Peace"
-              class="Like-btn"
-              data-testid="more-button"
-              aria-expanded="false"
-            >
-              <svg
-                role="img"
-                height="32"
-                width="32"
-                viewBox="0 0 24 24"
-                class="Svg-def jgfuCe"
-              >
-                <path
-                  d="M4.5 13.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm15 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm-7.5 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
-                ></path>
-              </svg>
-            </button>
-          </section>
-        </section>
-        <section class="songs">
-          <ul class="song-items">
-            <li class="item">
-              <button
-                class="foot-btn"
-                aria-label="Слушать"
-                data-testid="control-button-playpause"
-                style="--button-size: 32px"
-              >
-                <svg
-                  role="img"
-                  height="16"
-                  width="16"
-                  viewBox="0 0 16 16"
-                  class="Svg-def jgfuCe"
+              </li>
+              <li class="item">
+                <button
+                  class="foot-btn"
+                  aria-label="Слушать"
+                  data-testid="control-button-playpause"
+                  style="--button-size: 32px"
                 >
-                  <path
-                    d="M3 1.713a.7.7 0 011.05-.607l10.89 6.288a.7.7 0 010 1.212L4.05 14.894A.7.7 0 013 14.288V1.713z"
-                  ></path>
-                </svg>
-              </button>
-              <img class="playlist-img" src="../assets/LiSA.jpg" , alt="" />
-              <div class="song-descr">
-                <p style="color: #fffffe">Name</p>
-                <p style="color: #a7a9be">Author</p>
-              </div>
-            </li>
-            <li class="item">
-              <button
-                class="foot-btn"
-                aria-label="Слушать"
-                data-testid="control-button-playpause"
-                style="--button-size: 32px"
-              >
-                <svg
-                  role="img"
-                  height="16"
-                  width="16"
-                  viewBox="0 0 16 16"
-                  class="Svg-def jgfuCe"
-                >
-                  <path
-                    d="M3 1.713a.7.7 0 011.05-.607l10.89 6.288a.7.7 0 010 1.212L4.05 14.894A.7.7 0 013 14.288V1.713z"
-                  ></path>
-                </svg>
-              </button>
-              <img class="playlist-img" src="../assets/LiSA.jpg" , alt="" />
-              <div class="song-descr">
-                <p style="color: #fffffe">Name</p>
-                <p style="color: #a7a9be">Author</p>
-              </div>
-            </li>
-            <li class="item">
-              <button
-                class="foot-btn"
-                aria-label="Слушать"
-                data-testid="control-button-playpause"
-                style="--button-size: 32px"
-              >
-                <svg
-                  role="img"
-                  height="16"
-                  width="16"
-                  viewBox="0 0 16 16"
-                  class="Svg-def jgfuCe"
-                >
-                  <path
-                    d="M3 1.713a.7.7 0 011.05-.607l10.89 6.288a.7.7 0 010 1.212L4.05 14.894A.7.7 0 013 14.288V1.713z"
-                  ></path>
-                </svg>
-              </button>
-
-              <img class="playlist-img" src="../assets/LiSA.jpg" , alt="" />
-              <div class="song-descr">
-                <p style="color: #fffffe">Name</p>
-                <p style="color: #a7a9be">Author</p>
-              </div>
-            </li>
-            <li class="item">
-              <button
-                class="foot-btn"
-                aria-label="Слушать"
-                data-testid="control-button-playpause"
-                style="--button-size: 32px"
-              >
-                <svg
-                  role="img"
-                  height="16"
-                  width="16"
-                  viewBox="0 0 16 16"
-                  class="Svg-def jgfuCe"
-                >
-                  <path
-                    d="M3 1.713a.7.7 0 011.05-.607l10.89 6.288a.7.7 0 010 1.212L4.05 14.894A.7.7 0 013 14.288V1.713z"
-                  ></path>
-                </svg>
-              </button>
-              <img class="playlist-img" src="../assets/LiSA.jpg" , alt="" />
-              <div class="song-descr">
-                <p style="color: #fffffe">Name</p>
-                <p style="color: #a7a9be">Author</p>
-              </div>
-            </li>
-            <li class="item">
-              <button
-                class="foot-btn"
-                aria-label="Слушать"
-                data-testid="control-button-playpause"
-                style="--button-size: 32px"
-              >
-                <svg
-                  role="img"
-                  height="16"
-                  width="16"
-                  viewBox="0 0 16 16"
-                  class="Svg-def jgfuCe"
-                >
-                  <path
-                    d="M3 1.713a.7.7 0 011.05-.607l10.89 6.288a.7.7 0 010 1.212L4.05 14.894A.7.7 0 013 14.288V1.713z"
-                  ></path>
-                </svg>
-              </button>
-              <img class="playlist-img" src="../assets/LiSA.jpg" , alt="" />
-              <div class="song-descr">
-                <p style="color: #fffffe">Name</p>
-                <p style="color: #a7a9be">Author</p>
-              </div>
-            </li>
-          </ul>
-        </section>
-      </div>
-      <div id="search_page" class="search-wind not-active">
-        <section class="head">
-          <div class="heads_heder">
-            <form role="search">
-              <input
-                class="line-locat ebHsEf QO9loc33XC50mMRUCIvf"
-                maxlength="800"
-                autocorrect="off"
-                autocapitalize="off"
-                spellcheck="false"
-                placeholder="Исполнитель, трек или подкаст"
-                data-testid="search-input"
-                value=""
-                style="color: rgb(0, 0, 0)"
-              />
-            </form>
-            <section class="Person">
-              <img class="img" src="../assets/LiSA.jpg" , alt="" />
-              <a style="font-family: monospace">Nickname</a>
-            </section>
-          </div>
-        </section>
-        <section class="recomends">
-          <h2 style="font-family: monospace">Recomendations</h2>
-          <ul class="rec-list">
-            <li class="lItem">
-              <div class="rec-item">
-                <img class="recomends-img" src="../assets/LiSA.jpg" />
-                <p>Name</p>
-              </div>
-            </li>
-            <li class="lItem">
-              <div class="rec-item">
-                <img class="recomends-img" src="../assets/LiSA.jpg" />
-                <p>Name</p>
-              </div>
-            </li>
-            <li class="lItem">
-              <div class="rec-item">
-                <img class="recomends-img" src="../assets/LiSA.jpg" />
-                <p>Name</p>
-              </div>
-            </li>
-            <li class="lItem">
-              <div class="rec-item">
-                <img class="recomends-img" src="../assets/LiSA.jpg" />
-                <p>Name</p>
-              </div>
-            </li>
-          </ul>
-        </section>
-      </div>
-      <div id="library_page" class="MyPlaylist">
-        <section class="head">
-          <div class="heads_heder">
-            <form role="search">
-              <input
-                class="line-locat ebHsEf QO9loc33XC50mMRUCIvf"
-                maxlength="800"
-                autocorrect="off"
-                autocapitalize="off"
-                spellcheck="false"
-                placeholder="Исполнитель, трек или подкаст"
-                data-testid="search-input"
-                value=""
-                style="color: rgb(0, 0, 0)"
-              />
-            </form>
-            <section class="Person">
-              <img class="img" src="../assets/LiSA.jpg" , alt="" />
-              <a href="#auth">Nickname</a>
-            </section>
-          </div>
-
-          <section class="playlist">
-            <img class="playlist-img" src="../assets/LiSA.jpg" , alt="" />
-            <div class="playlist_and_name_container">
-              <h2 style="font-family: monospace">Liked</h2>
-              <a  style="font-family: monospace">Nickname</a>
-            </div>
-
-            <p style="color: #a7a9be; font-family: monospace">
-              Your favourite songs
-            </p>
-          </section>
-          <section class="buttons">
-            <div class="Like-btn">
-              <button data-testid="play-button" class="Button-qlcn5g-0 iaAUvZ">
-                <div
-                  class="ButtonInner-sc-14ud5tc-0 gHYQaG encore-bright-accent-set"
-                >
-                  <span
-                    aria-hidden="true"
-                    class="IconWrapper__Wrapper-sc-1hf1hjl-0 dZGDpi"
-                    ><svg
-                      role="img"
-                      height="36"
-                      width="36"
-                      viewBox="0 0 24 24"
-                      class="Svg-def jgfuCe"
-                    >
-                      <path
-                        d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"
-                      ></path></svg
-                  ></span>
+                  <svg
+                    role="img"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 16 16"
+                    class="Svg-def jgfuCe"
+                  >
+                    <path
+                      d="M3 1.713a.7.7 0 011.05-.607l10.89 6.288a.7.7 0 010 1.212L4.05 14.894A.7.7 0 013 14.288V1.713z"
+                    ></path>
+                  </svg>
+                </button>
+                <img class="playlist-img" src="../assets/LiSA.jpg" , alt="" />
+                <div class="song-descr">
+                  <p style="color: #fffffe">Name</p>
+                  <p style="color: #a7a9be">Author</p>
                 </div>
-              </button>
-            </div>
-            <button
-              class="Like-btn"
-              type="button"
-              role="switch"
-              aria-checked="false"
-              aria-label="Добавить в медиатеку"
-              class="Fm7C3gdh5Lsc9qSXrQwO"
-              data-testid="add-button"
-            >
-              <svg role="img" height="24" width="24" class="Svg-def jgfuCe">
-                <path
-                  d="M5.21 1.57a6.757 6.757 0 016.708 1.545.124.124 0 00.165 0 6.741 6.741 0 015.715-1.78l.004.001a6.802 6.802 0 015.571 5.376v.003a6.689 6.689 0 01-1.49 5.655l-7.954 9.48a2.518 2.518 0 01-3.857 0L2.12 12.37A6.683 6.683 0 01.627 6.714 6.757 6.757 0 015.21 1.57zm3.12 1.803a4.757 4.757 0 00-5.74 3.725l-.001.002a4.684 4.684 0 001.049 3.969l.009.01 7.958 9.485a.518.518 0 00.79 0l7.968-9.495a4.688 4.688 0 001.049-3.965 4.803 4.803 0 00-3.931-3.794 4.74 4.74 0 00-4.023 1.256l-.008.008a2.123 2.123 0 01-2.9 0l-.007-.007a4.757 4.757 0 00-2.214-1.194z"
-                ></path>
-              </svg>
-            </button>
-            <button
-              type="button"
-              aria-haspopup="menu"
-              aria-label="Открыть контекстное меню: Peace"
-              class="Like-btn"
-              data-testid="more-button"
-              aria-expanded="false"
-            >
-              <svg
-                role="img"
-                height="32"
-                width="32"
-                viewBox="0 0 24 24"
-                class="Svg-def jgfuCe"
-              >
-                <path
-                  d="M4.5 13.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm15 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm-7.5 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
-                ></path>
-              </svg>
-            </button>
+              </li>
+              <li class="item">
+                <button
+                  class="foot-btn"
+                  aria-label="Слушать"
+                  data-testid="control-button-playpause"
+                  style="--button-size: 32px"
+                >
+                  <svg
+                    role="img"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 16 16"
+                    class="Svg-def jgfuCe"
+                  >
+                    <path
+                      d="M3 1.713a.7.7 0 011.05-.607l10.89 6.288a.7.7 0 010 1.212L4.05 14.894A.7.7 0 013 14.288V1.713z"
+                    ></path>
+                  </svg>
+                </button>
+
+                <img class="playlist-img" src="../assets/LiSA.jpg" , alt="" />
+                <div class="song-descr">
+                  <p style="color: #fffffe">Name</p>
+                  <p style="color: #a7a9be">Author</p>
+                </div>
+              </li>
+              <li class="item">
+                <button
+                  class="foot-btn"
+                  aria-label="Слушать"
+                  data-testid="control-button-playpause"
+                  style="--button-size: 32px"
+                >
+                  <svg
+                    role="img"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 16 16"
+                    class="Svg-def jgfuCe"
+                  >
+                    <path
+                      d="M3 1.713a.7.7 0 011.05-.607l10.89 6.288a.7.7 0 010 1.212L4.05 14.894A.7.7 0 013 14.288V1.713z"
+                    ></path>
+                  </svg>
+                </button>
+                <img class="playlist-img" src="../assets/LiSA.jpg" , alt="" />
+                <div class="song-descr">
+                  <p style="color: #fffffe">Name</p>
+                  <p style="color: #a7a9be">Author</p>
+                </div>
+              </li>
+              <li class="item">
+                <button
+                  class="foot-btn"
+                  aria-label="Слушать"
+                  data-testid="control-button-playpause"
+                  style="--button-size: 32px"
+                >
+                  <svg
+                    role="img"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 16 16"
+                    class="Svg-def jgfuCe"
+                  >
+                    <path
+                      d="M3 1.713a.7.7 0 011.05-.607l10.89 6.288a.7.7 0 010 1.212L4.05 14.894A.7.7 0 013 14.288V1.713z"
+                    ></path>
+                  </svg>
+                </button>
+                <img class="playlist-img" src="../assets/LiSA.jpg" , alt="" />
+                <div class="song-descr">
+                  <p style="color: #fffffe">Name</p>
+                  <p style="color: #a7a9be">Author</p>
+                </div>
+              </li>
+            </ul>
           </section>
-        </section>
-        <section class="songs">
-          <ul class="song-items">
-            <li class="item">
+        </div>
+        <div id="search_page" class="search-wind not-active">
+          <section class="head">
+            <div class="heads_heder">
+              <form role="search">
+                <input
+                  class="line-locat ebHsEf QO9loc33XC50mMRUCIvf"
+                  maxlength="800"
+                  autocorrect="off"
+                  autocapitalize="off"
+                  spellcheck="false"
+                  placeholder="Исполнитель, трек или подкаст"
+                  data-testid="search-input"
+                  value=""
+                  style="color: rgb(0, 0, 0)"
+                />
+              </form>
+              <!--<section class="Person">
+                <img class="img" src="../assets/LiSA.jpg" , alt="" />
+                <a href="#auth" id="Nick">Nickname</a>
+              </section>-->
+            </div>
+          </section>
+          <section class="recomends">
+            <h2 style="font-family: monospace">Recomendations</h2>
+            <ul class="rec-list">
+              <li class="lItem">
+                <div class="rec-item">
+                  <img class="recomends-img" src="../assets/LiSA.jpg" />
+                  <p>Name</p>
+                </div>
+              </li>
+              <li class="lItem">
+                <div class="rec-item">
+                  <img class="recomends-img" src="../assets/LiSA.jpg" />
+                  <p>Name</p>
+                </div>
+              </li>
+              <li class="lItem">
+                <div class="rec-item">
+                  <img class="recomends-img" src="../assets/LiSA.jpg" />
+                  <p>Name</p>
+                </div>
+              </li>
+              <li class="lItem">
+                <div class="rec-item">
+                  <img class="recomends-img" src="../assets/LiSA.jpg" />
+                  <p>Name</p>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </div>
+        <div id="library_page" class="MyPlaylist">
+          <section class="head">
+            <div class="heads_heder">
+              <form role="search">
+                <input
+                  class="line-locat ebHsEf QO9loc33XC50mMRUCIvf"
+                  maxlength="800"
+                  autocorrect="off"
+                  autocapitalize="off"
+                  spellcheck="false"
+                  placeholder="Исполнитель, трек или подкаст"
+                  data-testid="search-input"
+                  value=""
+                  style="color: rgb(0, 0, 0)"
+                />
+              </form>
+              <!--<section class="Person">
+                <img class="img" src="../assets/LiSA.jpg" , alt="" />
+                <a href="#auth" id="Nick">Nickname</a>
+              </section>-->
+            </div>
+
+            <section class="playlist">
+              <img class="playlist-img" src="../assets/LiSA.jpg" , alt="" />
+              <div class="playlist_and_name_container">
+                <h2 style="font-family: monospace">Liked</h2>
+                <a  style="font-family: monospace">Nickname</a>
+              </div>
+
+              <p style="color: #a7a9be; font-family: monospace">
+                Your favourite songs
+              </p>
+            </section>
+            <section class="buttons">
+              <div class="Like-btn">
+                <button data-testid="play-button" class="Button-qlcn5g-0 iaAUvZ">
+                  <div
+                    class="ButtonInner-sc-14ud5tc-0 gHYQaG encore-bright-accent-set"
+                  >
+                    <span
+                      aria-hidden="true"
+                      class="IconWrapper__Wrapper-sc-1hf1hjl-0 dZGDpi"
+                      ><svg
+                        role="img"
+                        height="36"
+                        width="36"
+                        viewBox="0 0 24 24"
+                        class="Svg-def jgfuCe"
+                      >
+                        <path
+                          d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"
+                        ></path></svg
+                    ></span>
+                  </div>
+                </button>
+              </div>
               <button
-                class="foot-btn"
-                aria-label="Слушать"
-                data-testid="control-button-playpause"
-                style="--button-size: 32px"
+                class="Like-btn"
+                type="button"
+                role="switch"
+                aria-checked="false"
+                aria-label="Добавить в медиатеку"
+                class="Fm7C3gdh5Lsc9qSXrQwO"
+                data-testid="add-button"
               >
-                <svg
-                  role="img"
-                  height="16"
-                  width="16"
-                  viewBox="0 0 16 16"
-                  class="Svg-def jgfuCe"
-                >
+                <svg role="img" height="24" width="24" class="Svg-def jgfuCe">
                   <path
-                    d="M3 1.713a.7.7 0 011.05-.607l10.89 6.288a.7.7 0 010 1.212L4.05 14.894A.7.7 0 013 14.288V1.713z"
+                    d="M5.21 1.57a6.757 6.757 0 016.708 1.545.124.124 0 00.165 0 6.741 6.741 0 015.715-1.78l.004.001a6.802 6.802 0 015.571 5.376v.003a6.689 6.689 0 01-1.49 5.655l-7.954 9.48a2.518 2.518 0 01-3.857 0L2.12 12.37A6.683 6.683 0 01.627 6.714 6.757 6.757 0 015.21 1.57zm3.12 1.803a4.757 4.757 0 00-5.74 3.725l-.001.002a4.684 4.684 0 001.049 3.969l.009.01 7.958 9.485a.518.518 0 00.79 0l7.968-9.495a4.688 4.688 0 001.049-3.965 4.803 4.803 0 00-3.931-3.794 4.74 4.74 0 00-4.023 1.256l-.008.008a2.123 2.123 0 01-2.9 0l-.007-.007a4.757 4.757 0 00-2.214-1.194z"
                   ></path>
                 </svg>
               </button>
-              <img class="playlist-img" src="../assets/LiSA.jpg" , alt="" />
-              <div class="song-descr">
-                <p style="color: #fffffe">Name</p>
-                <p style="color: #a7a9be">Author</p>
-              </div>
-            </li>
-            <li class="item">
               <button
-                class="foot-btn"
-                aria-label="Слушать"
-                data-testid="control-button-playpause"
-                style="--button-size: 32px"
+                type="button"
+                aria-haspopup="menu"
+                aria-label="Открыть контекстное меню: Peace"
+                class="Like-btn"
+                data-testid="more-button"
+                aria-expanded="false"
               >
                 <svg
                   role="img"
-                  height="16"
-                  width="16"
-                  viewBox="0 0 16 16"
+                  height="32"
+                  width="32"
+                  viewBox="0 0 24 24"
                   class="Svg-def jgfuCe"
                 >
                   <path
-                    d="M3 1.713a.7.7 0 011.05-.607l10.89 6.288a.7.7 0 010 1.212L4.05 14.894A.7.7 0 013 14.288V1.713z"
+                    d="M4.5 13.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm15 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm-7.5 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
                   ></path>
                 </svg>
               </button>
-              <img class="playlist-img" src="../assets/LiSA.jpg" , alt="" />
-              <div class="song-descr">
-                <p style="color: #fffffe">Name</p>
-                <p style="color: #a7a9be">Author</p>
-              </div>
-            </li>
-            <li class="item">
-              <button
-                class="foot-btn"
-                aria-label="Слушать"
-                data-testid="control-button-playpause"
-                style="--button-size: 32px"
-              >
-                <svg
-                  role="img"
-                  height="16"
-                  width="16"
-                  viewBox="0 0 16 16"
-                  class="Svg-def jgfuCe"
+            </section>
+          </section>
+          <section class="songs">
+            <ul class="song-items">
+              <li class="item">
+                <button
+                  class="foot-btn"
+                  aria-label="Слушать"
+                  data-testid="control-button-playpause"
+                  style="--button-size: 32px"
                 >
-                  <path
-                    d="M3 1.713a.7.7 0 011.05-.607l10.89 6.288a.7.7 0 010 1.212L4.05 14.894A.7.7 0 013 14.288V1.713z"
-                  ></path>
-                </svg>
-              </button>
-              <img class="playlist-img" src="../assets/LiSA.jpg" , alt="" />
-              <div class="song-descr">
-                <p style="color: #fffffe">Name</p>
-                <p style="color: #a7a9be">Author</p>
-              </div>
-            </li>
-            <li class="item">
-              <button
-                class="foot-btn"
-                aria-label="Слушать"
-                data-testid="control-button-playpause"
-                style="--button-size: 32px"
-              >
-                <svg
-                  role="img"
-                  height="16"
-                  width="16"
-                  viewBox="0 0 16 16"
-                  class="Svg-def jgfuCe"
+                  <svg
+                    role="img"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 16 16"
+                    class="Svg-def jgfuCe"
+                  >
+                    <path
+                      d="M3 1.713a.7.7 0 011.05-.607l10.89 6.288a.7.7 0 010 1.212L4.05 14.894A.7.7 0 013 14.288V1.713z"
+                    ></path>
+                  </svg>
+                </button>
+                <img class="playlist-img" src="../assets/LiSA.jpg" , alt="" />
+                <div class="song-descr">
+                  <p style="color: #fffffe">Name</p>
+                  <p style="color: #a7a9be">Author</p>
+                </div>
+              </li>
+              <li class="item">
+                <button
+                  class="foot-btn"
+                  aria-label="Слушать"
+                  data-testid="control-button-playpause"
+                  style="--button-size: 32px"
                 >
-                  <path
-                    d="M3 1.713a.7.7 0 011.05-.607l10.89 6.288a.7.7 0 010 1.212L4.05 14.894A.7.7 0 013 14.288V1.713z"
-                  ></path>
-                </svg>
-              </button>
-              <img class="playlist-img" src="../assets/LiSA.jpg" , alt="" />
-              <div class="song-descr">
-                <p style="color: #fffffe">Name</p>
-                <p style="color: #a7a9be">Author</p>
-              </div>
-            </li>
-            <li class="item">
-              <button
-                class="foot-btn"
-                aria-label="Слушать"
-                data-testid="control-button-playpause"
-                style="--button-size: 32px"
-              >
-                <svg
-                  role="img"
-                  height="16"
-                  width="16"
-                  viewBox="0 0 16 16"
-                  class="Svg-def jgfuCe"
+                  <svg
+                    role="img"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 16 16"
+                    class="Svg-def jgfuCe"
+                  >
+                    <path
+                      d="M3 1.713a.7.7 0 011.05-.607l10.89 6.288a.7.7 0 010 1.212L4.05 14.894A.7.7 0 013 14.288V1.713z"
+                    ></path>
+                  </svg>
+                </button>
+                <img class="playlist-img" src="../assets/LiSA.jpg" , alt="" />
+                <div class="song-descr">
+                  <p style="color: #fffffe">Name</p>
+                  <p style="color: #a7a9be">Author</p>
+                </div>
+              </li>
+              <li class="item">
+                <button
+                  class="foot-btn"
+                  aria-label="Слушать"
+                  data-testid="control-button-playpause"
+                  style="--button-size: 32px"
                 >
-                  <path
-                    d="M3 1.713a.7.7 0 011.05-.607l10.89 6.288a.7.7 0 010 1.212L4.05 14.894A.7.7 0 013 14.288V1.713z"
-                  ></path>
-                </svg>
-              </button>
-              <img class="playlist-img" src="../assets/LiSA.jpg" , alt="" />
-              <div class="song-descr">
-                <p style="color: #fffffe">Name</p>
-                <p style="color: #a7a9be">Author</p>
-              </div>
-            </li>
-          </ul>
-        </section>
+                  <svg
+                    role="img"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 16 16"
+                    class="Svg-def jgfuCe"
+                  >
+                    <path
+                      d="M3 1.713a.7.7 0 011.05-.607l10.89 6.288a.7.7 0 010 1.212L4.05 14.894A.7.7 0 013 14.288V1.713z"
+                    ></path>
+                  </svg>
+                </button>
+                <img class="playlist-img" src="../assets/LiSA.jpg" , alt="" />
+                <div class="song-descr">
+                  <p style="color: #fffffe">Name</p>
+                  <p style="color: #a7a9be">Author</p>
+                </div>
+              </li>
+              <li class="item">
+                <button
+                  class="foot-btn"
+                  aria-label="Слушать"
+                  data-testid="control-button-playpause"
+                  style="--button-size: 32px"
+                >
+                  <svg
+                    role="img"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 16 16"
+                    class="Svg-def jgfuCe"
+                  >
+                    <path
+                      d="M3 1.713a.7.7 0 011.05-.607l10.89 6.288a.7.7 0 010 1.212L4.05 14.894A.7.7 0 013 14.288V1.713z"
+                    ></path>
+                  </svg>
+                </button>
+                <img class="playlist-img" src="../assets/LiSA.jpg" , alt="" />
+                <div class="song-descr">
+                  <p style="color: #fffffe">Name</p>
+                  <p style="color: #a7a9be">Author</p>
+                </div>
+              </li>
+              <li class="item">
+                <button
+                  class="foot-btn"
+                  aria-label="Слушать"
+                  data-testid="control-button-playpause"
+                  style="--button-size: 32px"
+                >
+                  <svg
+                    role="img"
+                    height="16"
+                    width="16"
+                    viewBox="0 0 16 16"
+                    class="Svg-def jgfuCe"
+                  >
+                    <path
+                      d="M3 1.713a.7.7 0 011.05-.607l10.89 6.288a.7.7 0 010 1.212L4.05 14.894A.7.7 0 013 14.288V1.713z"
+                    ></path>
+                  </svg>
+                </button>
+                <img class="playlist-img" src="../assets/LiSA.jpg" , alt="" />
+                <div class="song-descr">
+                  <p style="color: #fffffe">Name</p>
+                  <p style="color: #a7a9be">Author</p>
+                </div>
+              </li>
+            </ul>
+          </section>
       </div>
+    </div>
     </main>
 
     <footer class="player">
@@ -827,8 +832,9 @@
       </div>  
     </div>
     <script type="module" src="auth.js"></script>
-    <script type="module"src="index.js"></script>
-    
+    <script type="module" src="navigation.js"></script>
+    <!--<script type="modulу" src="router.js"></script>
+    <script type="module" src="routes.js"></script>-->
   </body>
 
 
