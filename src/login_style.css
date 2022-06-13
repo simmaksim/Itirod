@@ -3,15 +3,14 @@ body{
     
 }
 .login {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
     background-color: black;
+    height: 100vh;
+    place-items: center;
   }
   
   .login > img {
     height: 200px;
-    padding: 100px;
   }
   
   .login > a {
